@@ -30,22 +30,14 @@
     "require-dev": {
         "h4cc/alice-fixtures-bundle": "dev-master",
         "nelmio/api-doc-bundle": "@stable",
-        "behat/behat": "~3.0",
-        "behat/mink-extension": "dev-master",
-        "behat/symfony2-extension": "dev-master",
         "phpunit/phpunit": "4.0.x",
-        "behat/mink-browserkit-driver": "*",
-        "pdepend/pdepend": "@stable",
-        "phpmd/phpmd": "@stable",
-        "behat/mink-zombie-driver": "@stable",
-        "behat/mink-selenium2-driver": "@stable",
-        "phploc/phploc": "@stable",
-        "sebastian/phpcpd": "@stable",
-        "sebastian/phpdcd": "@stable",
         "guzzlehttp/guzzle": "4.*",
         "liip/functional-test-bundle": "dev-master"
     },
     "scripts": {
+        "post-root-package-install": [
+            "SymfonyStandard\\Composer::hookRootPackageInstall"
+        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
