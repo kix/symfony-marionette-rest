@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Users/kix/Documents/Code/php/symfony-marionette-rest/app/config/routing_dev.yml

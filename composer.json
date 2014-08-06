@@ -1,0 +1,77 @@
+{
+    "name": "kix/symfony-marionette-rest",
+    "description": "Symfony2 skeleton application for RESTful Backbone/Marionette-based applications",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Stepan Anchugov",
+            "email": "kixxx1@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "~2.4",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
+        "twig/extensions": "~1.0",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~2.3",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "~2.3",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "hearsay/require-js-bundle": "2.0.x@dev",
+        "bmatzner/marionette-bundle": "~1.8",
+        "friendsofsymfony/rest-bundle": "dev-master",
+        "jms/serializer-bundle": "0.13.0"
+    },
+    "require-dev": {
+        "h4cc/alice-fixtures-bundle": "dev-master",
+        "nelmio/api-doc-bundle": "@stable",
+        "behat/behat": "~3.0",
+        "behat/mink-extension": "dev-master",
+        "behat/symfony2-extension": "dev-master",
+        "phpunit/phpunit": "4.0.x",
+        "behat/mink-browserkit-driver": "*",
+        "pdepend/pdepend": "@stable",
+        "phpmd/phpmd": "@stable",
+        "behat/mink-zombie-driver": "@stable",
+        "behat/mink-selenium2-driver": "@stable",
+        "phploc/phploc": "@stable",
+        "sebastian/phpcpd": "@stable",
+        "sebastian/phpdcd": "@stable",
+        "guzzlehttp/guzzle": "4.*",
+        "liip/functional-test-bundle": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "branch-alias": {
+            "dev-master": "2.4-dev"
+        },
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}
